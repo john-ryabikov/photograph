@@ -1,0 +1,268 @@
+.block-7 {
+    @include flex-column();
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    &__cont {
+        @include flex-column();
+        justify-content: flex-start;
+        width: 100%;
+    }
+    &__h {
+        font-size: 60px;
+        color: #000000;
+        text-transform: uppercase;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        margin-bottom: 50px;
+    }
+    &__contacts {
+        @include flex-row();
+        justify-content: space-around;
+        width: 100%;
+    }
+}    
+.form {
+    @include flex-column();
+    width: 460px;
+    background-color: #FBFBFB;
+    border: 3px solid #000;
+    padding-bottom: 30px;
+    &__title {
+        position: absolute;
+        font-size: 34px;
+        font-weight: 100;
+        top: -22px;
+        left: 0;
+        width: 360px;
+        height: 40px;
+        background-color: #FBFBFB;
+        text-transform: uppercase;
+        z-index: 2;
+        padding: 0;
+        text-align: start;
+        padding-left: 16px;
+    }
+    &__box {
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 360px;
+        margin-top: 40px;
+    }
+    &__label {
+        font-weight: 300;
+        font-size: 12px;
+        color: #000;
+        text-align: start;
+    }
+    &__input {
+        font-size: 16px;
+        font-weight: 400;
+        background: none;
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 40px;
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,0.400);
+        outline: none;
+        color: #000;
+        padding-left: 0;
+    }
+    &__checkbox {
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    &__checkbox-label {
+        position: relative;
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        display: inline-block;
+        padding-left: 25px;
+        line-height: 20px;
+        margin-bottom: 13px;
+    }    
+    &__checkbox-input {
+        position: absolute;  
+        opacity: 0;
+    }
+    &__checkbox-radio {
+        border: 2px solid #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        text-align: center;
+        cursor: pointer;
+        img {
+            display: none;
+        }
+    }
+    &__button {
+        @include flex-column();
+        width: 100%;
+        height: 60px;
+        color: #000000;
+        cursor: pointer;
+        text-align: center;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        transition: all 0.4s;
+        border: none;
+        background-color: #e0e0e0;
+        border-radius: 3px;
+        &:hover {
+            transform: scale(0.95, 0.95);
+            background-color: #000000;
+            color: #fff;
+        }
+    }
+    &__rule {
+        position: relative;
+        font-size: 12px;
+        font-weight: 300;
+        color: #000000;
+        text-align: center;
+        width: 360px;
+        margin-top: 20px;
+    }    
+    &__rule-link {
+        font-weight: 500;
+        color: #292929;
+        transition: all 0.4s;
+        text-decoration: underline;
+        &:hover {
+            color: #000000;
+        }
+    }    
+}
+.form__checkbox input:checked ~ .form__checkbox-radio img {
+    display: block;
+    transition: all 0.4s;
+}
+
+.social-blog {
+    @include flex-column();
+    align-items: flex-start;
+    justify-content: center;
+    width: 360px;
+    &__item {
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+        width: 100%;
+        padding-bottom: 16px;
+    }
+    &__buttons {
+        @include flex-row();
+        justify-content: flex-start;
+    }
+    &__button {
+        @include flex-column();
+        width: 24px;
+        height: 24px;
+        transition: all 0.4s;
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            transform: scale(1.05, 1.05);
+        }
+    }
+    &__inner {
+        @include flex-row();
+        justify-content: flex-start;
+    }
+    &__icon {
+        @include flex-column();
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 300;
+        &_text-link {
+            color: #000;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .block-7 {
+        padding-top: 20px;
+        padding-bottom: 60px;
+        &__h {
+            font-size: 40px;
+        }
+        &__contacts {
+            @include flex-column();
+            justify-content: flex-start;
+        }
+    }    
+    .form {
+        width: 100%;
+        &__title {
+            font-size: 24px;
+            top: -18px;
+            width: 260px;
+            padding-left: 12px;
+        }
+        &__box {
+            width: 85%;
+        }
+        &__input {
+            width: 100%;
+        }    
+    } 
+    .social-blog {
+        width: 100%;
+        margin-top: 80px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1179px) {
+    .block-7 {
+        padding-bottom: 60px;
+        &__h {
+            font-size: 50px;
+        }
+        &__contacts {
+            @include flex-column();
+            justify-content: flex-start;
+        }
+    }
+    .social-blog {
+        margin-top: 80px;
+    }
+}
