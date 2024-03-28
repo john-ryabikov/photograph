@@ -14,6 +14,11 @@ const mont = Montserrat({
 export const metadata = {
   title: "Portfolio for photographer",
   description: "Сайт реализован с помощью Next.js",
+  authors: [{name: 'Just-site.ru'}],
+  openGraph: { images: [
+      { url: 'http://localhost:3000/og-image.png'}
+    ] 
+  }
 };
 
 export default function RootLayout({ children }) {
