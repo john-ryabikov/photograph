@@ -61,10 +61,10 @@ export default function Form() {
 
     const formSubmit = (dataForm) => {
         const text_tg = [
-          `<b>Имя клиента: ${dataForm.name}</b>\n`,
-          `<b>Тип съемки: ${dataForm.type}</b>\n`,
-          `<b>Дата съемки: ${dataForm.date}</b>\n`,
-          `<b>Телефон клиента: ${dataForm.phone}</b>`
+          `<b>Имя клиента:</b> ${dataForm.name}\n`,
+          `<b>Тип съемки:</b> ${dataForm.type}\n`,
+          `<b>Дата съемки:</b> ${dataForm.date}\n`,
+          `<b>Телефон клиента:</b> ${dataForm.phone}`
         ]
         sendMsg(text_tg)
         alert("Вы записаны на съемку!")
