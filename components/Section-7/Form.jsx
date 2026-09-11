@@ -1,11 +1,11 @@
 'use client'
 
 import Image from "next/image"
-import axios from "axios";
+// import axios from "axios";
 
 import { useState } from "react"
 
-const URI_API = "https://api.telegram.org/bot6833220386:AAEIj-86iGxnLgU4XRQwl5Jtv8V9XEwYnek/sendMessage"
+// const URI_API = "https://api.telegram.org/bot6833220386:AAEIj-86iGxnLgU4XRQwl5Jtv8V9XEwYnek/sendMessage"
 
 export default function Form() {
 
@@ -44,30 +44,31 @@ export default function Form() {
 
     }
     
-    const sendMsg = (arr_msg) => {
-        let msg = ""
-        for (let text_tg of arr_msg) {
-          msg += text_tg
-        }  
-        axios.post(URI_API, {
-          chat_id: -1002063310192,
-          parse_mode: "html",
-          text: msg
-        })
-        .catch ((err) => {
-          alert(err)
-        });
-    }
+    // const sendMsg = (arr_msg) => {
+    //     let msg = ""
+    //     for (let text_tg of arr_msg) {
+    //       msg += text_tg
+    //     }  
+    //     axios.post(URI_API, {
+    //       chat_id: -1002063310192,
+    //       parse_mode: "html",
+    //       text: msg
+    //     })
+    //     .catch ((err) => {
+    //       alert(err)
+    //     });
+    // }
 
     const formSubmit = (dataForm) => {
-        const text_tg = [
-          `<b>Имя клиента:</b> ${dataForm.name}\n`,
-          `<b>Тип съемки:</b> ${dataForm.type}\n`,
-          `<b>Дата съемки:</b> ${dataForm.date}\n`,
-          `<b>Телефон клиента:</b> ${dataForm.phone}`
-        ]
-        sendMsg(text_tg)
+        // const text_tg = [
+        //   `<b>Имя клиента:</b> ${dataForm.name}\n`,
+        //   `<b>Тип съемки:</b> ${dataForm.type}\n`,
+        //   `<b>Дата съемки:</b> ${dataForm.date}\n`,
+        //   `<b>Телефон клиента:</b> ${dataForm.phone}`
+        // ]
+        // sendMsg(text_tg)
         alert("Вы записаны на съемку!")
+        console.log(dataForm)
     }
 
 
